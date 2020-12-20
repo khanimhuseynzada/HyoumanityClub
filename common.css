@@ -1,0 +1,181 @@
+/* **************Navbar************** */
+
+
+/* navbar for web */
+#nav-links {
+ display: flex;
+ justify-content: space-around;
+ width: 60%;
+ margin: 0 auto;
+}
+
+#nav-links>li {
+ list-style: none;
+ padding: 10px;
+}
+
+#nav-links>li>a {
+ text-decoration: none;
+ font-weight: bold;
+ color: black;
+}
+
+#nav-links>li>a:hover {
+ font-size: 17px;
+ color: rgb(177, 166, 166);
+}
+
+
+/* nav-toggler for mobile */
+
+.nav-toggler {
+ border: 2px solid #fff;
+ padding: 5px;
+ background-color: transparent;
+ cursor: pointer;
+ height: 39px;
+display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+ width: 25px;
+ height: 2px;
+ background-color: #000000;
+ display: block;
+ transition: .3s;
+}
+
+/* changing icon of the toggler */
+.nav-toggler span:before {
+ content: '';
+ transform: translateY(-9px);
+}
+.nav-toggler span:after {
+ content: '';
+ transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+ background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+ transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+ transform: translateY(-3px) rotate(-45deg);
+}
+
+/* nav-toggler for mobile end */
+
+
+
+/* mobile breakpoint of navbar start */
+
+@media (max-width: 800px) {
+
+ .nav-toggler{
+   display: block;
+ }
+
+ .nav-toggler:focus{
+   outline: none;
+ }
+ .site-navbar {
+   min-height: 40px;
+ }
+ .site-navbar ul {
+   position: absolute;
+   width: 100%;
+   height: calc(100vh - 40px);
+   left: 0;
+   top: 40px;
+   flex-direction: column;
+   align-items: center;
+   background-color: #ffffff;
+   opacity: 95%;
+   max-height: 0;
+   overflow: hidden;
+   transition: .3s;
+ }
+ .site-navbar ul li {
+   width: 100%;
+   text-align: center;
+ }
+ .site-navbar ul li a {
+   padding: 25px;
+ }
+ .site-navbar ul.open {
+   max-height: 100vh;
+   overflow: visible;
+ }
+}
+/* mobile breakpoint end */
+
+
+
+.social {
+  width: 100%;
+  background-color: #e9e4e0;
+  padding-top: 20px;
+}
+
+.social h1 {
+  text-align: center;
+  padding: 35px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  
+}
+
+.social hr {
+  width: 171px;
+  background-color: black;
+  border: 0.5px solid black;
+  text-align: center;
+}
+
+.socialDiv {
+  display: flex;
+  width: 15%;
+  margin: 0 auto;
+  padding: 60px;
+  justify-content: center;
+
+}
+
+.copyright-text{
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.socialDiv>div i:hover {
+  background-color: #e9e4e0;
+}
+
+.socialDiv>div i {
+  line-height: 1.2;
+  color: black;
+  font-size: 30px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+
+@media(max-width: 700px){
+  .socialDiv>div i {
+    line-height: 1.2;
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  
+  
+}

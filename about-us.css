@@ -1,0 +1,269 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#sponsors-header, #values-header {
+  margin-bottom: 80px;
+}
+
+
+/* **************Intro section************** */
+
+#intro {
+  background: linear-gradient(-45deg, #cfc6bf, #ffffff, #DED6D0);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#intro-text {
+  flex-basis: 50%;
+}
+
+#intro-text p {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 400;
+}
+
+#hello-text {
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+}
+
+.red-bold-small {
+  font-weight: bold;
+  color: #da2326;
+}
+
+#intro-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#intro-img img {
+  width: 100px;
+  flex: 0 50%;
+}
+
+/* **************End of the Intro section************** */
+
+/* **************Join section************** */
+
+#join-section {
+  color: #da2326;
+  background-color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#join-text {
+  flex-basis: 70%;
+  text-align: right;
+  font-size: 14px;
+}
+
+#join-header {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 900;
+}
+
+.join-us-link {
+  background-color: #ffffff;
+  color: #da2326;
+  border: 1px solid #da2326;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 40px;
+  text-transform: uppercase;
+text-decoration: none;
+
+}
+
+/* **************End of the Join section************** */
+
+/* **************Velues section************** */
+
+#values-section {
+  background-image: linear-gradient(to bottom, #ded6d04d 50%, #ded6d04d 50%), url('images/aboutus-values-bg.jpg');
+  padding: 50px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.values {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.value {
+  opacity: 70%;
+  background-color: #ffffff;
+  width: 250px;
+  height: 320px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  color: #000000;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.value i {
+  font-size: 50px;
+  padding: 20px;
+}
+
+.value-name {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.value-text {
+  font-size: 14px;
+}
+
+.read-more-link {
+  color: #000000;
+  border: 1px solid #000000;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 7px;
+}
+
+.read-more-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#values-header {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  line-height: 0;
+}
+
+/* **************End of the Values section************** */
+
+/* **************Sponsors section************** */
+
+#sponsors-section {
+  background-color: #ffffff;
+  padding: 30px 0;
+}
+
+#sponsors-header {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  font-size: 50px;
+  color: #000000;
+  line-height: 0;
+  font-weight: 400;
+}
+
+#logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  filter: grayscale(100%);
+}
+
+.logo {
+  width: 120px;
+}
+
+.logo:hover{
+  filter: grayscale(0);
+}
+
+
+/* **************End of the Sponsors section************** */
+
+/* **************Media Queries for Responsiveness************** */
+
+@media (max-width: 1200px) {
+  #intro-img img {
+    width: 70px;
+  }
+  #intro-text p {
+    font-size: 13px;
+  }
+  #hello-text {
+    font-size: 40px;
+  }
+  .value {
+    width: 300px;
+    height: 280px;
+    margin: 20px;
+    padding: 20px;
+  }
+  .value-name {
+    font-size: 20px;
+  }
+  .value-text {
+    font-size: 13px;
+  }
+  .value i {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  #intro {
+    flex-direction: column;
+    padding: 20px 50px;
+    box-shadow: none;
+  }
+  #intro-text p {
+    font-size: 10px;
+  }
+  #values-header {
+    font-size: 50px;
+    line-height: 0;
+  }
+  #sponsors-header {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .logo {
+    width: 50px;
+  }
+}
+
+
+
+

@@ -1,0 +1,299 @@
+html{
+ scroll-behavior: smooth;
+}
+body {
+ border: 0;
+ margin: 0;
+ padding: 0;
+ font-family: 'Montserrat', sans-serif;
+}
+
+/* **************Intro section************** */
+
+#intro {
+ background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('images/products-intro-bg.jpg');
+ height: 536px;
+ background-size: cover;
+ color: white;
+ padding: 20px;
+ color: black;
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#intro-content {
+ width: 550px;
+}
+
+#intro-header {
+ font-family: 'Dancing Script', cursive;
+ text-align: center;
+ font-size: 80px;
+ color: #000000;
+ line-height: 0;
+ font-weight: 400;
+}
+
+#intro-p {
+ font-size: 15px;
+ margin-bottom: 50px;
+}
+
+.red-button {
+ background-color: #da2326;
+ border: none;
+ width: 150px;
+ height: 50px;
+ font-size: 20px;
+ color: #ffffff;
+
+ padding: 20px;
+ text-decoration: none;
+}
+
+.red-button:hover {
+ background-color: transparent;
+ color: #da2326;
+ border: 2px solid #da2326;
+}
+
+/* **************End of the Intro section************** */
+
+/* **************Products section************** */
+
+#products-section {
+ position: relative;
+ background-color: #DED6D0;
+ padding: 100px;
+ height: 380px;
+}
+
+#products-header {
+ position: absolute;
+ top: 100px;
+ font-size: 60px;
+ line-height: 0;
+ left: 20px;
+ letter-spacing: 10px;
+ writing-mode: vertical-rl;
+ text-orientation: mixed;
+ background: none;
+ color: #da2326;
+ text-transform: uppercase;
+}
+
+#all-products {
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+.product {
+ width: 250px;
+}
+
+.product-img {
+ width: 250px;
+ box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.product-name {
+ font-size: 25px;
+}
+
+.old-price-tag {
+ text-decoration: line-through;
+}
+
+.new-price-tag {
+ background-color: #da2326;
+ font-weight: 800;
+ font-size: 15px;
+ padding: 3px;
+ color: #DED6D0;
+ border-radius: 9px;
+ margin-left: 15px;
+}
+
+.new-price-tag i {
+ font-size: 11px;
+}
+
+.read-more-button {
+ color: #da2326;
+ border: 1px solid #da2326;
+ text-decoration: none;
+ font-size: 15px;
+ padding: 5px;
+ background-color: #DED6D0;
+ margin-top: 20px;
+ font-weight: 500;
+}
+
+.read-more-button:hover {
+ background-color: #da2326;
+ color: #DED6D0;
+}
+
+button:focus {
+ outline: solid;
+}
+
+/* **************End of the Products section************** */
+
+/* **************Locations section************** */
+
+#locations-section {
+ background: linear-gradient(to bottom, #ffffff 30%, #cfc6bf9c);
+}
+
+#locations-header {
+ margin: 0;
+ text-align: center;
+ font-family: 'Dancing Script', cursive;
+ font-size: 50px;
+ padding: 50px 0;
+}
+
+#locations {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.location {
+ display: flex;
+ justify-content: space-evenly;
+ width: 900px;
+ margin: 40px 0;
+}
+
+.locaton-img img {
+ width: 250px;
+}
+
+.text-left {
+ text-align: right;
+}
+
+.location-number {
+ font-size: 45px;
+ color: #da2326;
+}
+
+.border-left {
+ border-left: 3px solid #da2326;
+}
+
+.border-right {
+ border-right: 3px solid #da2326;
+}
+
+.view-map-link {
+ color: #da2326;
+}
+
+/* **************End of the Locations section************** */
+
+/* **************Media Queries for Responsiveness************** */
+
+@media (max-width: 1200px) {
+ #products-section {
+  height: 1400px;
+ }
+ .location {
+  width: 600px;
+  margin: 20px;
+ }
+ #all-products {
+  flex-direction: column;
+ }
+ .product {
+  margin: 30px;
+  text-align: center;
+ }
+ #products-header {
+  top: 300px;
+  font-size: 80px;
+  letter-spacing: 50px;
+ }
+ .locaton-img img {
+  display: none;
+ }
+}
+
+@media (max-width: 600px) {
+ #intro-header {
+  font-size: 50px;
+ }
+ #intro-p {
+  font-size: 12px;
+ }
+ #products-section {
+  height: 1200px;
+  padding: 40px 0;
+ }
+ .product {
+  margin: 30px 0;
+  width: 250px;
+ }
+ .product-img {
+  width: 180px;
+ }
+ #products-header {
+  text-align: center;
+  font-size: 35px;
+  position: relative;
+  top: 0;
+  line-height: 0;
+  left: 0;
+  letter-spacing: 3px;
+  writing-mode: horizontal-tb;
+  font-weight: 400;
+ }
+
+ .product-name {
+  font-size: 20px;
+ }
+ .read-more-button {
+  font-size: 12px;
+  margin-top: 15px;
+ }
+ .old-price-tag {
+  text-decoration: line-through;
+  font-size: 12px;
+ }
+ .new-price-tag {
+  font-weight: 800;
+  font-size: 10px;
+  padding: 3px;
+  color: #DED6D0;
+  margin-left: 10px;
+ }
+ .new-price-tag i {
+  font-size: 8px;
+ }
+ #locations-header {
+  font-size: 40px;
+ }
+ .location {
+  width: 200px;
+  margin: 20px 0;
+  padding: 0 30px;
+ }
+ .location-number {
+  font-size: 30px;
+ }
+ .location-name {
+  font-size: 15px;
+ }
+ .location-address {
+  font-size: 12px;
+ }
+ .view-map-link {
+  font-size: 12px;
+ }
+}
