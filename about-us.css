@@ -1,6 +1,7 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 body {
   border: 0;
   margin: 0;
@@ -11,7 +12,6 @@ body {
 #sponsors-header, #values-header {
   margin-bottom: 80px;
 }
-
 
 /* **************Intro section************** */
 
@@ -103,8 +103,12 @@ body {
   font-size: 20px;
   padding: 15px 40px;
   text-transform: uppercase;
-text-decoration: none;
+  text-decoration: none;
+}
 
+.join-us-link:hover {
+  background-color: #da2326;
+  color: #ffffff;
 }
 
 /* **************End of the Join section************** */
@@ -206,11 +210,6 @@ text-decoration: none;
   width: 120px;
 }
 
-.logo:hover{
-  filter: grayscale(0);
-}
-
-
 /* **************End of the Sponsors section************** */
 
 /* **************Media Queries for Responsiveness************** */
@@ -263,7 +262,3 @@ text-decoration: none;
     width: 50px;
   }
 }
-
-
-
-

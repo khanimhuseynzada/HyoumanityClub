@@ -120,15 +120,20 @@
     </div>
   </section>
 
-
   <section id="sponsors-section">
     <h2 id="sponsors-header">Our Sponsors</h2>
     <div id="logos">
-      <img class="logo" src="images/logo1-ada-university.png" alt="">
-      <img class="logo" src="images/logo2-min.ofeducation.png" alt="">
-      <img class="logo" src="images/logo3-mcd.png" alt="">
-      <img class="logo" src="images/logo4-book-center.png" alt="">
-      <img class="logo" src="images/logo5-sara.png" alt="">
+      <a target="_blank" href="https://www.ada.edu.az/"><img class="logo" src="images/logo1-ada-university.png"
+          alt=""></a>
+      <a href="https://edu.gov.az/" target="_blank"> <img class="logo" src="images/logo2-min.ofeducation.png"
+          alt=""></a>
+      <a href="https://mcdonalds.az/" target="_blank"> <img class="logo" src="images/logo3-mcd.png" alt=""></a>
+      <a href="https://bakubookcenter.az/" target="_blank"> <img class="logo" src="images/logo4-book-center.png"
+          alt=""></a>
+
+      <a href="https://facebook.com/sara.fabrik.1?fref=nf&pn_ref=story" target="_blank"> <img class="logo"
+          src="images/logo5-sara.png" alt=""></a>
+
     </div>
   </section>
 
@@ -137,15 +142,20 @@
     <h1 id="hello-text">Social Media</h1>
     <hr>
     <div class="socialDiv">
-        <div><a target="_blank" href="https://www.instagram.com/hyoumanity.club"><i class="fab fa-instagram"></i></a></div>
+      <div><a target="_blank" href="https://www.instagram.com/hyoumanity.club"><i class="fab fa-instagram"></i></a>
+      </div>
 
-        <div><a target="_blank" href="https://m.tiktok.com/h5/share/usr/6904973602824438786.html?_d=secCgsIARCbDRgBIAMoARI%2BCjw675bRI6eZcXi3xY0p80cFVu0PMiQpdcvwKPGeStoqAC2i%2FDH%2FeZtOQEfYAG5hNrtN2SWYv2xxLRmEnE8aAA%3D%3D&language=en&sec_uid=MS4wLjABAAAACUvbQUyU7S3kWQAK5pxoaqp6BVAztmnU-Fc9z6oHiJ4bty_0dFT_0zl6FPYNimbE&sec_user_id=MS4wLjABAAAA4ZCyHh4--OzWDGtW1d7G4Zj24GyGEn4iX8koioniXNxc20zgTTeRmm4wCtz760Me&share_author_id=6904973602824438786&share_link_id=623434F0-5B14-4FAF-9AF0-12ED5098AA29&tt_from=copy&u_code=dbekehfggl1b8e&user_id=6807728041735209989&utm_campaign=client_share&utm_medium=ios&utm_source=copy"><i class="fab fa-tiktok"></i></a></div>
-        <div><a target="_blank" href="https://www.youtube.com/channel/UCTcdCnOGoyMiOSD0ufgDkrQ"><i class="fab fa-youtube"></i></a></div>
-        <div><a target="_blank" href="https://www.facebook.com/pg/hyoumanity.club/posts"><i class="fab fa-facebook"></i></a></div>
+      <div><a target="_blank"
+          href="https://m.tiktok.com/h5/share/usr/6904973602824438786.html?_d=secCgsIARCbDRgBIAMoARI%2BCjw675bRI6eZcXi3xY0p80cFVu0PMiQpdcvwKPGeStoqAC2i%2FDH%2FeZtOQEfYAG5hNrtN2SWYv2xxLRmEnE8aAA%3D%3D&language=en&sec_uid=MS4wLjABAAAACUvbQUyU7S3kWQAK5pxoaqp6BVAztmnU-Fc9z6oHiJ4bty_0dFT_0zl6FPYNimbE&sec_user_id=MS4wLjABAAAA4ZCyHh4--OzWDGtW1d7G4Zj24GyGEn4iX8koioniXNxc20zgTTeRmm4wCtz760Me&share_author_id=6904973602824438786&share_link_id=623434F0-5B14-4FAF-9AF0-12ED5098AA29&tt_from=copy&u_code=dbekehfggl1b8e&user_id=6807728041735209989&utm_campaign=client_share&utm_medium=ios&utm_source=copy"><i
+            class="fab fa-tiktok"></i></a></div>
+      <div><a target="_blank" href="https://www.youtube.com/channel/UCTcdCnOGoyMiOSD0ufgDkrQ"><i
+            class="fab fa-youtube"></i></a></div>
+      <div><a target="_blank" href="https://www.facebook.com/pg/hyoumanity.club/posts"><i
+            class="fab fa-facebook"></i></a></div>
     </div>
 
     <p class="copyright-text">© 2020 | Group 3 | All Rights Reserved</p>
-</div>
+  </div>
 
   <script>
 
@@ -156,6 +166,39 @@
     function valueNormal(x) {
       x.style.opacity = "0.8";
     }
+
+    //JS is used to check errors that might occur while submitting the form
+
+    const email = document.getElementById("email");
+    const button = document.getElementById("button");
+    const blankError = "Input cannot be empty...";
+    const emailError = "Input should contain an email";
+
+    button.addEventListener("click", errorCheck);
+
+    function errorCheck() {
+      event.preventDefault();
+
+      if (email.value == "") {
+        email.setAttribute("placeholder", "email " + blankError);
+      } else if (
+        !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          email.value
+        )
+
+      ) {
+        email.value = "";
+        email.setAttribute("placeholder", emailError);
+      }
+      if (number.value == "") {
+        number.setAttribute("placeholder", "number " + blankError);
+      } else if (isNaN(number.value)) {
+        number.value = "";
+        number.setAttribute("placeholder", numericError + " numbers");
+      }
+    }
+
+
 
   </script>
 
